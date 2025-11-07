@@ -1,7 +1,8 @@
-from fastapi
+from fastapi import FastAPI
 
-import FastAPI app = FastAPI() 
+app = FastAPI()
 
-@app.get("/") 
-async def root(): 
-  return {"message": "Hello People, this is just a test"}
+@app.get("/")
+def root():
+    return {"message": "🚀 Aplicação FastAPI funcionando corretamente!"}
+
