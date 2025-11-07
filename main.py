@@ -6,3 +6,7 @@ app = FastAPI()
 def root():
     return {"message": "🚀 Aplicação FastAPI funcionando corretamente!"}
 
+@app.get("/healthz")
+def health():
+    return {"status": "ok"}
+
