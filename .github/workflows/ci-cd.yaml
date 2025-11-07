@@ -46,8 +46,8 @@ jobs:
 
       - name: Update manifests repo (SSH)
         run: |
-          git clone git@github.com:Fonsetiy/hello-manifest.git hello-manifest
-          cd hello-manifest
+          git clone git@github.com:Fonsetiy/hello-manifests.git hello-manifests
+          cd hello-manifests
           sed -i "s| ${{secrets.DOCKER_USERNAME}}/hello-app:.*| ${{secrets.DOCKER_USERNAME}}/hello-app:${{ github.sha }}|g" deployment.yaml
           git add .
           git commit -m "ci: update image to ${{ github.sha }}"
