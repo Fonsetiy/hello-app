@@ -31,7 +31,7 @@ jobs:
 
       - name: Atualizar repo de manifests
         run: |
-          git clone git@github.com:seuusuario/hello-manifests.git
+          git clone git@github.com:Fonsetiy/hello-manifests.git
           cd hello-manifests
           git checkout -b update-image-${{ github.run_number }}
           sed -i "s|TAG_PLACEHOLDER|${{ github.sha }}|g" deployment.yaml
